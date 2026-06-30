@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="alert.css" />
+  <title>Reminder</title>
+</head>
+<body>
+  <header class="alert-header">
+    <span class="alert-icon" aria-hidden="true">⏰</span>
+    <span>Reminder</span>
+  </header>
+  <main class="alert-body">
+    <p class="alert-task" id="task"></p>
+    <p class="alert-meta" id="meta"></p>
+  </main>
+  <footer class="alert-actions">
+    <button type="button" class="btn primary" id="done">Mark done</button>
+    <button type="button" class="btn" id="snooze">Snooze 10 min</button>
+    <button type="button" class="btn ghost" id="dismiss">Dismiss</button>
+  </footer>
+
+  <script src="store.js"></script>
+  <script src="alert.js"></script>
+</body>
+</html>

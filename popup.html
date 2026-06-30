@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="popup.css" />
+  <title>Meowdo</title>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="icons/icon32.png" alt="" class="brand-logo" />
+      <div>
+        <h1>Meowdo</h1>
+        <p class="tagline" id="subtitle">Your todos at a glance</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- List switcher / management (rebuilt by render()). -->
+    <div class="toolbar" id="toolbar"></div>
+
+    <form id="add-form" autocomplete="off">
+      <input id="add-input" type="text" placeholder="Add a task…" maxlength="500" aria-label="Add a task" />
+      <button type="submit" class="add-btn" title="Add task" aria-label="Add task">
+        <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+    </form>
+
+    <div class="filters" id="filters"></div>
+
+    <ul class="todo-list" id="todo-list"></ul>
+    <p class="empty" id="empty" hidden></p>
+
+    <footer class="app-footer">
+      <div class="foot-row">
+        <button type="button" class="link-btn" id="clear-done" hidden></button>
+      </div>
+      <div class="foot-note">Everything stays on your device · Made by
+        <a href="https://artfred16.github.io" target="_blank" rel="noopener noreferrer">artfred16</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="store.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

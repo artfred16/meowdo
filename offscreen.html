@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8" /><title>Meowdo chime</title></head>
+<body>
+  <!-- Invisible, audio-only document. A service worker can't play sound directly (no DOM/Web
+       Audio), so the worker spins this up to play the reminder chime, then closes it. -->
+  <script src="offscreen.js"></script>
+</body>
+</html>
