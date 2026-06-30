@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Meowdo",
-  "version": "1.0.0",
-  "description": "A fast, private to-do list in your toolbar — organize tasks into lists, see what's left at a glance, and get optional reminders. Everything stays on your device.",
+  "version": "1.0.1",
+  "description": "A fast, private to-do list — organize into lists, see what's left, and get optional reminders. All on your device.",
   "author": "artfred16",
   "homepage_url": "https://artfred16.github.io",
   "permissions": [

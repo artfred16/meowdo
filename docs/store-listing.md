@@ -178,4 +178,4 @@ No
 | Permission justifications | one per permission | ✓ (4) |
 | Privacy policy URL | required | ✓ published (gist) |
 | Visibility / Pricing / Regions | required | Public / Free / All |
-| Package (.zip) | ≤ allowed size | `dist/meowdo-v1.0.0.zip` |
+| Package (.zip) | ≤ allowed size | `dist/meowdo-v1.0.1.zip` |
