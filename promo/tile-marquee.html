@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../popup.css">
+<style>
+  html, body { width: auto !important; height: auto !important; margin: 0; }
+  .tile {
+    width: 1400px; height: 560px; box-sizing: border-box; padding: 0 96px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+    display: flex; align-items: center; gap: 64px; overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #fff;
+  }
+  .left { flex: 1; }
+  .brandrow { display: flex; align-items: center; gap: 24px; margin-bottom: 26px; }
+  .brandrow img { width: 108px; height: 108px; border-radius: 24px; box-shadow: 0 18px 44px rgba(0,0,0,.32); }
+  .brandrow h1 { margin: 0; font-size: 74px; font-weight: 780; letter-spacing: -1.5px; }
+  .left p { margin: 0; font-size: 27px; line-height: 1.42; opacity: .92; max-width: 560px; }
+  .pills { display: flex; gap: 12px; margin-top: 28px; }
+  .pill { font-size: 17px; font-weight: 650; padding: 8px 16px; border-radius: 999px;
+          background: rgba(255,255,255,.16); }
+  .frame { flex: none; }
+  .popup { width: 360px; background: #fff; border-radius: 16px; overflow: hidden; zoom: 1.18;
+           color: var(--text); /* don't inherit the tile's white text */
+           box-shadow: 0 40px 90px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.22); }
+  .popup .todo-list { max-height: none; overflow: visible; }
+  .popup :focus { outline: none !important; box-shadow: none !important; }
+</style></head><body>
+<div class="tile">
+  <div class="left">
+    <div class="brandrow"><img src="../icons/icon128.png" alt=""><h1>Meowdo</h1></div>
+    <p>A fast, private to-do list in your toolbar — organize into lists, see what's left, and get optional reminders.</p>
+    <div class="pills"><span class="pill">Lists</span><span class="pill">Reminders</span><span class="pill">100% on your device</span></div>
+  </div>
+  <div class="frame">
+    <div class="popup">
+      <header class="app-header">
+        <div class="brand">
+          <img src="../icons/icon32.png" alt="" class="brand-logo">
+          <div><h1>Meowdo</h1><p class="tagline">2 tasks left</p></div>
+        </div>
+      </header>
+      <main>
+        <div class="toolbar">
+          <select class="list-select"><option>Tasks &#183; 2</option></select>
+          <button class="icon-btn"><svg viewBox="0 0 24 24" class="ico"><path d="M12 5v14M5 12h14"/></svg></button>
+          <button class="icon-btn"><svg viewBox="0 0 24 24" class="ico"><path d="M12 5h.01M12 12h.01M12 19h.01" stroke-width="2.6"/></svg></button>
+        </div>
+        <form id="add-form"><input id="add-input" placeholder="Add a task…"><button class="add-btn"><svg viewBox="0 0 24 24" class="ico"><path d="M12 5v14M5 12h14"/></svg></button></form>
+        <div class="filters">
+          <button class="filter active">All <span class="n">3</span></button>
+          <button class="filter">Active <span class="n">2</span></button>
+          <button class="filter">Done <span class="n">1</span></button>
+        </div>
+        <ul class="todo-list">
+          <li class="todo"><div class="todo-row"><button class="check"></button><span class="todo-text">Email the vet about Luna</span><div class="todo-actions"><button class="remind-chip"><svg viewBox="0 0 24 24" class="ico"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6.5 2 6.5H4S6 14 6 9M9.5 19a2.5 2.5 0 0 0 5 0"/></svg><span>5:00 PM</span></button><button class="row-btn delete"><svg viewBox="0 0 24 24" class="ico"><path d="M4 7h16M9 7V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V7M6.5 7l.8 12a1.5 1.5 0 0 0 1.5 1.4h6.4a1.5 1.5 0 0 0 1.5-1.4l.8-12M10 11v6M14 11v6"/></svg></button></div></div></li>
+          <li class="todo"><div class="todo-row"><button class="check"></button><span class="todo-text">Buy cat food &amp; litter</span><div class="todo-actions"><button class="row-btn remind"><svg viewBox="0 0 24 24" class="ico"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6.5 2 6.5H4S6 14 6 9M9.5 19a2.5 2.5 0 0 0 5 0"/></svg></button><button class="row-btn delete"><svg viewBox="0 0 24 24" class="ico"><path d="M4 7h16"/></svg></button></div></div></li>
+          <li class="todo done"><div class="todo-row"><button class="check"><svg viewBox="0 0 24 24" class="ico"><path d="M5 13l4 4 10-10"/></svg></button><span class="todo-text">Renew gym membership</span><div class="todo-actions"><button class="row-btn delete"><svg viewBox="0 0 24 24" class="ico"><path d="M4 7h16"/></svg></button></div></div></li>
+        </ul>
+        <footer class="app-footer"><div class="foot-note">Everything stays on your device · Made by <a>artfred16</a></div></footer>
+      </main>
+    </div>
+  </div>
+</div>
+</body></html>
